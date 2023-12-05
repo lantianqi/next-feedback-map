@@ -108,7 +108,7 @@ function Form() {
     }
 
     return (
-      <button type="button" onClick={getUserLocation} className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+      <button type="button" onClick={getUserLocation} className= "hover:bg-blue-500 font-semibold hover:text-white py-2 px-4 border border-gray-100 hover:border-transparent rounded  bg-slate-100 text-slate-600 dark:bg-slate-600 dark:text-slate-100">
         Get
       </button>
     );
@@ -130,7 +130,7 @@ function Form() {
       setUserMessage("");
     }
     return (
-      <button type="button" onClick={reset} className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+      <button type="button" onClick={reset} className= "hover:bg-blue-500 font-semibold hover:text-white py-2 px-4 border border-gray-100 hover:border-transparent rounded  bg-slate-100 text-slate-600 dark:bg-slate-600 dark:text-slate-100">
         Reset
       </button>
     );
@@ -273,7 +273,7 @@ function Form() {
       <button
         type="submit"
         disabled={pending}
-        className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+        className= "hover:bg-blue-500 font-semibold hover:text-white py-2 px-4 border border-gray-100 hover:border-transparent rounded  bg-slate-100 text-slate-600 dark:bg-slate-600 dark:text-slate-100"
       >
         {pending ? "Submitting..." : "Submit"}
       </button>
@@ -285,23 +285,23 @@ function Form() {
       <form onSubmit={handleSubmit}>
         <h1 className="text-2xl"> Form </h1>
         <label> name <br />
-          <input type="text" value={userDisplayName} name="displayName" onChange={(e) => setUserDisplayName(e.target.value)} required={true} className="border rounded max-w-4xl w-full pl-1" />
+          <input onChange={(e) => setUserDisplayName(e.target.value)} required={true} className="border rounded max-w-4xl w-full pl-1 bg-slate-100 text-slate-600 dark:bg-slate-600 dark:text-slate-100" />
         </label> <br />
         <label> message <br />
-          <textarea value={userMessage} name="message" onChange={(e) => setUserMessage(e.target.value)} required={true} className="border rounded max-w-4xl w-full pl-1" rows={3} />
+          <textarea value={userMessage} name="message" onChange={(e) => setUserMessage(e.target.value)} required={true} className="border rounded max-w-4xl w-full pl-1 bg-slate-100 text-slate-600 dark:bg-slate-600 dark:text-slate-100" rows={3} />
         </label> <br />
         <label> latitude <br />
-          <input type="text" value={userLatitude} name="userLatitude" readOnly className="border rounded max-w-4xl w-full pl-1" />
+          <input type="text" value={userLatitude} name="userLatitude" readOnly className="border rounded max-w-4xl w-full pl-1 bg-slate-100 text-slate-600 dark:bg-slate-600 dark:text-slate-100" />
         </label> <br />
         <label> longitude <br />
-          <input type="text" value={userLongitude} name="userLongitude" readOnly className="border rounded max-w-4xl w-full pl-1" />
+          <input type="text" value={userLongitude} name="userLongitude" readOnly className="border rounded max-w-4xl w-full pl-1 bg-slate-100 text-slate-600 dark:bg-slate-600 dark:text-slate-100" />
         </label>
         <br />
         <label> city <br />
-          <input type="text" value={userCity} name="userCity" readOnly className="border rounded max-w-4xl w-full pl-1" />
+          <input type="text" value={userCity} name="userCity" readOnly className="border rounded max-w-4xl w-full pl-1 bg-slate-100 text-slate-600 dark:bg-slate-600 dark:text-slate-100" />
         </label> <br />
         <label> region <br />
-          <input type="text" value={userRegion} name="userRegion" readOnly className="border rounded max-w-4xl w-full pl-1" />
+          <input type="text" value={userRegion} name="userRegion" readOnly className="border rounded max-w-4xl w-full pl-1 bg-slate-100 text-slate-600 dark:bg-slate-600 dark:text-slate-100" />
         </label> <br />
         <span className="grid grid-cols-3 gap-4 mt-4">
           <GetGeo />
