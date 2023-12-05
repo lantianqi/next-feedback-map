@@ -17,7 +17,7 @@ export function Header() {
     return (
         <div className="z-10 top-0 w-full h-10 p-1 bg-transparent">
             <button className="absolute right-1 p-1 border-stone-100 bg-gray-800 text-gray-50 dark:bg-gray-50 dark:text-gray-800"
-                onClick={() => { theme == "dark" ? setTheme("llight") : setTheme("dark") }}
+                onClick={() => { theme == "dark" ? setTheme("light") : setTheme("dark") }}
             >
                 <p>Toggle Mode</p>
                 
